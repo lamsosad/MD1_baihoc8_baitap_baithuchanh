@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khởi tạo nhập</title>
+</head>
+<body>
+<script>
+    let nhap = +prompt('Nhập số bất kì:   ')
+    let arr = [-1, 1, 2, 3, 4, 5, 6, 7, 5, 4, 99]
+    let check = false;
+    for (let i = 0; i < arr.length; i++) {
+        if (nhap == arr[i]) {
+            arr.splice(i, 1)
+            arr.push(0)
+            check = true;
+        }
+    }
+    document.write(arr)
+    if (!check){
+        alert(' Không tồn tại số này!!!!')
+    }
+
+</script>
+</body>
+</html>
